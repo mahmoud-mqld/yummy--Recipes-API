@@ -3,15 +3,6 @@
     src: url(../fonts/DeliusSwashCaps-Regular.ttf);
 }
 
-@font-face {
-    font-family: 'm2';
-    src: url(../fonts/Lobster_Two/LobsterTwo-Regular.ttf);
-}
-
-@font-face {
-    font-family: 'pixel';
-    src: url(../fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf);
-}
 
 
 body {
@@ -228,8 +219,14 @@ ul {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 2em;
+    z-index: 5;
+    margin:1em 2em;
+    padding: 2px;
+    scale: 1.1;
+    background-color: var(--color-2);
+    border-radius: 5px;
 }
+
 /* -----------------------------------form----------------------------------------------- */
 #form {
 }
@@ -243,7 +240,7 @@ form input {
 }
 form {
     padding: 3rem;
-    border-radius: 90%;
+    border-radius: 40%;
     background-color: var(--color-3);
 }
 /* ------------scrollbar--------------------------------- */
