@@ -1,4 +1,4 @@
-$( document ).on( "load",()=> {
+$( window ).on( "load",()=> {
   $('.loading').fadeOut(1000);
   $("body").css("overflow", "visible")
 
