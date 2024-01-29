@@ -1,5 +1,5 @@
 $( window ).on( "load",()=> {
-  $('.loading').fadeOut(1000);
+  $('.loading').fadeOut(1500);
   $("body").css("overflow", "visible")
 
 });
@@ -60,7 +60,7 @@ class Nav {
       $("#gallery").addClass("d-none");
       $("#ditails").addClass("d-none");
       $('#form').addClass('d-none')
-      $('.loading').fadeOut(1000);
+      $('.loading').fadeOut(1500);
 
       sideNavClose ()
 
@@ -91,7 +91,7 @@ class Nav {
       $("#gallery").addClass("d-none");
       $("#ditails").addClass("d-none");
       $('.search').addClass('d-none')
-      $('.loading').fadeOut(1000);
+      $('.loading').fadeOut(1500);
 
       resetForm ()
       // runValidation()
@@ -150,7 +150,7 @@ class Ui {
     $("#ditails").addClass("d-none");
     $('.search').addClass('d-none')
     $("#gallery").removeClass("d-none");
-    $('.loading').fadeOut(1000);
+    $('.loading').fadeOut(1500);
 
   }
   
@@ -234,7 +234,7 @@ function displaymeals(data) {
   $("#gallery").html(gallery);
   $("#ditails").addClass("d-none");
   $("#gallery").removeClass("d-none");
-  $('.loading').fadeOut(1000);
+  $('.loading').fadeOut(1500);
   // $('.search').addClass('d-none')
 
 }
@@ -242,8 +242,10 @@ function displaymeals(data) {
 // ----------------------get meal details by id-----------------------------------------------------
 async function getMealById(id) {
   $('.loading').fadeIn(200)
+
   const data = await fetch(
-    `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
+    `https:www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
+  );
   const res = await data.json();
   console.log(res);
   const meal = res.meals[0];
@@ -268,11 +270,11 @@ function displayDetails(meal) {
 
 <div class=" col-9 col-md-3">
 
-            <div class="card rounded-5 ">
-                <img class="rounded-5" src="${meal.strMealThumb}" alt="">
+            <div class="card rounded-5 ms-0 me-1 mx-3">
+                <img class="rounded-5 " src="${meal.strMealThumb}" alt="">
             </div>
 
-            <h2>${meal.strMeal}</h2>
+            <h2 class="p2">${meal.strMeal}</h2>
         </div>
         <div class=" col-9 col-md-7">
       
@@ -322,7 +324,7 @@ ${meal.strTags}
   $("#ditails").removeClass("d-none");
     $("#gallery").addClass("d-none");
 
-    $('.loading').fadeOut(1000);
+    $('.loading').fadeOut(1500);
 
 }
 // -------------------------------search----------------------------------------------------------------------
@@ -403,7 +405,7 @@ function callIngredient() {
   })}
   function displayIngredient(data) {
     let gallery = ``;
-    for (let index = 0; index <124; index++) {
+    for (let index = 0; index <100; index++) {
       gallery += `                
                 <div id-data="i=${data[index].strIngredient}" id="card" class="d-flex justify-content-end my-1 col-md-3">
                 <div class="inner  d-flex justify-content-center  overflow-hidden position-relative rounded-4 ">
@@ -422,7 +424,7 @@ function callIngredient() {
     $("#ditails").addClass("d-none");
     $('.search').addClass('d-none')
     $("#gallery").removeClass("d-none");
-    $('.loading').fadeOut(1000);
+    $('.loading').fadeOut(1500);
 
   }
 // ---------------------------------------------------------------------------------
@@ -482,7 +484,7 @@ async function getList() {
     $("#ditails").addClass("d-none");
     $('.search').addClass('d-none')
     $("#gallery").removeClass("d-none");
-    $('.loading').fadeOut(1000);
+    $('.loading').fadeOut(1500);
 
   }
 
