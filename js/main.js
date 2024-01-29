@@ -403,7 +403,7 @@ function callIngredient() {
   })}
   function displayIngredient(data) {
     let gallery = ``;
-    for (let index = 0; index <100; index++) {
+    for (let index = 0; index <124; index++) {
       gallery += `                
                 <div id-data="i=${data[index].strIngredient}" id="card" class="d-flex justify-content-end my-1 col-md-3">
                 <div class="inner  d-flex justify-content-center  overflow-hidden position-relative rounded-4 ">
