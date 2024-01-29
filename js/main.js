@@ -244,7 +244,7 @@ async function getMealById(id) {
   $('.loading').fadeIn(200)
 
   const data = await fetch(
-    `https://www.themealdb.com/api/json/v1/1/lookup.php?i=53063`
+    `www.themealdb.com/api/json/v1/1/lookup.php?i=52772`
   );
   const res = await data.json();
   console.log(res);
