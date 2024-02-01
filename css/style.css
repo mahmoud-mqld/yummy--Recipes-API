@@ -159,6 +159,8 @@ ul {
 
 
 .inner ul li {
+    text-align: center;
+
     font-size: clamp(.5rem, 1.1rem, 2rem);
     position: relative;
    color: var(--color-1);
