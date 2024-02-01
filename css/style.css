@@ -5,6 +5,7 @@
 
 
 
+
 body {
     margin: 0;
     padding: 0;
@@ -33,11 +34,11 @@ ul {
     --nav-width: clamp(120px, 13vw, 30vw);
     --width: 270px;
     /* ------------Color Palette--------------------- */
---color-1:#155263;
---color-2:#FF6F3C;
---color-3:#FF9A3C;
---color-4:#FFC93C;
---color-5:#6AA4FF;
+--color-1:#F28585;
+--color-2:#FFA447;
+--color-3:#FFFC9B;
+--color-4:#B7E5B4;
+--color-5:;
 --dark:;
     
 }
@@ -119,7 +120,7 @@ ul {
   
 /* ---------------------- */
 .sidebar {
-    background-color:var(--color-1);
+    background-color:var(--color-3);
     height: 100vh;
     width: var(--nav-width);
     z-index: 10;
@@ -127,6 +128,8 @@ ul {
     top: 0;
     bottom: 0;
     transition: left .3S ease-in;
+    margin-right: 2em;
+
 }
 
 .outer {
@@ -135,7 +138,7 @@ ul {
     top: 0;
     height: 100vh;
     width: 3em;
-    background-color: var(--color-5);
+    background-color: var(--color-2);
     right: 0;
     left: 100%;
 }
@@ -158,12 +161,17 @@ ul {
 .inner ul li {
     font-size: clamp(.5rem, 1.1rem, 2rem);
     position: relative;
-   color: var(--color-4);
+   color: var(--color-1);
    font-weight: 600;
 }
 
 .slide-btn {
     margin: 1.3em;
+}
+
+.inner ul li:hover {
+    color: var(--color-4);
+    background-color: var(--color-2);
 }
 
 .logo {
@@ -188,45 +196,43 @@ ul {
     background-color: rgba(21, 22, 22, .5);
 }
 
-.inner:hover .card-slide {
+#card .inner:hover .card-slide {
     top: 0px;
 }
 
-.inner:hover {
+#card .inner:hover {
     filter: drop-shadow(3px 2px 5px);
 }
 
 /* -------------------details------------------------------ */
+
+#ditails{
+    background-color: var(--color-4);
+}
 .Recipes {
     /* padding: 5px; */
     border-radius: 3px;
     width: fit-content;
-    background-color: var(--color-3);
+    background-color: var(--color-1);
     margin-bottom: 5px;
     margin-inline: 2px;
 }
 
 .Ingredient {
-    color: var(--color-1);
+    color: var(--color-3);
 }
 
 .measure {
     padding-inline-end: 6px;
-    color: var(--color-1);
+    color: var(--color-4);
 }
 .close-btn {
     cursor: pointer;
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 5;
-    margin:1em 2em;
-    padding: 2px;
-    scale: 1.1;
-    background-color: var(--color-2);
-    border-radius: 5px;
+    padding: 2em;
 }
-
 /* -----------------------------------form----------------------------------------------- */
 #form {
 }
@@ -240,8 +246,8 @@ form input {
 }
 form {
     padding: 3rem;
-    border-radius: 40%;
-    background-color: var(--color-3);
+    border-radius:20%;
+    background-color: var(--color-2);
 }
 /* ------------scrollbar--------------------------------- */
 /* width */
